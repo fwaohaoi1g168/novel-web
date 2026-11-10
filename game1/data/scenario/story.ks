@@ -8,13 +8,10 @@
 [clearfix]
 [start_keyconfig]
 
-;メニューボタン（セーブ・ロードはここから）
-@showmenubutton
-
-;メッセージウィンドウの設定
-[position layer="message0" left=160 top=500 width=1000 height=200 page=fore visible=true]
+;メッセージウィンドウの設定。窓とメニューボタンは、最初の場面の絵が出きってから出す（*scene1。11/10 本人「画面が冒頭に入る前にメッセージウインドウの表示が始まってる」）
+[position layer="message0" left=160 top=500 width=1000 height=200 page=fore visible=false]
 [position layer=message0 page=fore margint="45" marginl="50" marginr="70" marginb="60"]
-@layopt layer=message0 visible=true
+@layopt layer=message0 visible=false
 
 ;名前の欄
 [ptext name="chara_name_area" layer="message0" color="white" size=28 bold=true x=180 y=510]
@@ -78,6 +75,10 @@
 ;BGM：場面1はショップの曲（Degrees）。タイトルから同じ曲が流れているので、restart=false でかけ直さずにそのまま続ける（11/10）
 [playbgm storage="Degrees.mp3" loop=true volume=17 restart=false]
 [bg storage="shop.png" time=1000]
+
+;ここで初めて、文字の窓とメニューボタン（セーブ・ロードはここから）を出す
+@layopt layer=message0 visible=true
+@showmenubutton
 
 #
 2007年、渋谷・センター街。[r]

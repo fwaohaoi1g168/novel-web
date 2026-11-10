@@ -37,6 +37,7 @@
 [bg storage="bg_yashiki.jpg" time="0"]
 [mask_off time="500"]
 [playbgm storage="yashiki.ogg" loop="true" fadein="true" time="1000"]
+[call storage="ui.ks" target="*show_ui"]
 帝都のはずれ、丘の上に建つ白い洋館。[p]
 市電の会社を営む、花小路家のお屋敷である。[p]
 [chara_show name="chizuru" face="futsu" left="223" top="127" time="500" wait="false"]

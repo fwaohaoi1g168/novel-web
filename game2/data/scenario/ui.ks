@@ -8,10 +8,14 @@
 
 *game_ui
 [position layer="message0" left="0" top="535" width="1280" height="185" page="fore" frame="ui/textbox.png" opacity="255" margint="35" marginl="183" marginr="140" marginb="20"]
-[layopt layer="message0" visible="true"]
+[layopt layer="message0" visible="false"]
 ;名前の札（Ren'Py 版と同じく、窓の左上に重ねる。見た目は hakoiri.css）
 [ptext name="chara_name_area" layer="message0" x="153" y="535" size="24" color="0xf8f2e5" text=""]
 [chara_config ptext="chara_name_area" pos_mode="false"]
+[return]
+
+*show_ui
+[layopt layer="message0" visible="true"]
 ;窓の下の帯のボタン（Ren'Py 版のクイックメニュー。巻き戻しは無い）
 [button fix="true" x="378" y="697" graphic="ui/q_backlog.png" enterimg="ui/q_backlog_hover.png" role="backlog"]
 [button fix="true" x="477" y="697" graphic="ui/q_skip.png" enterimg="ui/q_skip_hover.png" role="skip"]
