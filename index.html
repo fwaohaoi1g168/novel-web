@@ -9,10 +9,12 @@
   main { max-width: 720px; margin: 0 auto; padding: 48px 20px; }
   h1 { font-size: 1.6rem; margin: 0 0 8px; }
   p.lead { color: #c9bfb2; margin: 0 0 32px; line-height: 1.7; }
-  a.game { display: block; padding: 20px 24px; margin-bottom: 16px; border-radius: 10px; background: #2c2723; color: inherit; text-decoration: none; border: 1px solid #4a423b; }
+  a.game { display: block; margin-bottom: 24px; border-radius: 10px; overflow: hidden; background: #2c2723; color: inherit; text-decoration: none; border: 1px solid #4a423b; }
   a.game:hover { background: #3a332d; }
+  a.game img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
+  a.game .text { display: block; padding: 16px 24px 18px; }
   a.game strong { display: block; font-size: 1.25rem; margin-bottom: 6px; }
-  a.game span { color: #c9bfb2; font-size: 0.95rem; }
+  a.game .text > span { color: #c9bfb2; font-size: 0.95rem; }
   .note { color: #9d9387; font-size: 0.85rem; line-height: 1.7; margin-top: 32px; }
   .note a { color: #d8c7a8; }
 </style>
@@ -23,12 +25,12 @@
   <p class="lead">インストールなしで、このまま遊べます。音が出ます。</p>
 
   <a class="game" href="game1/">
-    <strong>漢はコーデで語れ</strong>
-    <span>5分ほど</span>
+    <img src="images/title_game1.jpg" width="1280" height="720" alt="漢はコーデで語れ のタイトル画面">
+    <span class="text"><strong>漢はコーデで語れ</strong><span>5分ほど</span></span>
   </a>
   <a class="game" href="game2/">
-    <strong>箱入り娘のナンパ大作戦</strong>
-    <span>10分ほど</span>
+    <img src="images/title_game2.jpg" width="1280" height="720" alt="箱入り娘のナンパ大作戦 のタイトル画面">
+    <span class="text"><strong>箱入り娘のナンパ大作戦</strong><span>10分ほど</span></span>
   </a>
 
   <p class="note">
