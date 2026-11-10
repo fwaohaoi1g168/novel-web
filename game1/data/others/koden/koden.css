@@ -1,0 +1,195 @@
+/* 漢はコーデで語れ：セーブ・ロード・メニュー・バックログの見た目（2026-11-06）
+   タイトルのボタンに合わせて、黒地に金、ホバーで赤み。
+   画像は ../../../素材/絵/書き出しスクリプト/2026-11-06_システム画面を描く.py で描いた。
+   first.ks の [loadcss] で読み込み、[sysview] で data/others/koden/html/ の画面に差し替えている。 */
+
+/* 右下のメニューボタン */
+.button_menu img {
+    content: url("image/button_menu.png");
+}
+
+/* 見出し（左上） */
+#menu_save_wrapper .img_label,
+#menu_load_wrapper .img_label,
+#menu_backlog_wrapper .img_label,
+#menu_menu_wrapper .img_label {
+    left: 0;
+    top: 0;
+}
+
+/* メニュー */
+#menu_menu_wrapper .display_menu > div[style*="margin-top"] {
+    margin-top: 70px !important;
+}
+#menu_menu_wrapper .display_menu > div[style*="margin-top"] .menu_item {
+    margin-top: 12px;
+}
+
+/* セーブ・ロードの一覧 */
+#menu_save_wrapper .area_save_list,
+#menu_load_wrapper .area_save_list {
+    margin: 64px 0 0 70px;
+    width: 1120px;
+    height: 480px;
+}
+
+#menu_save_wrapper .save_list,
+#menu_load_wrapper .save_list {
+    font-family: "Yu Mincho", "YuMincho", "游明朝", serif !important;
+    width: 1080px;
+}
+
+#menu_save_wrapper .save_list_item_thumb,
+#menu_load_wrapper .save_list_item_thumb {
+    background-color: rgba(14, 10, 8, 0.86);
+    background-image: url("image/noimage.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    border: 1px solid #806030;
+    border-right: none;
+    text-align: center;
+}
+
+#menu_save_wrapper .save_list_item_thumb:has(img),
+#menu_load_wrapper .save_list_item_thumb:has(img) {
+    background-image: none;
+}
+
+#menu_save_wrapper .save_list_item_thumb img,
+#menu_load_wrapper .save_list_item_thumb img {
+    margin: 15px 0 0 0;
+    outline: 1px solid #d8b26a;
+}
+
+#menu_save_wrapper .save_list_item_area,
+#menu_load_wrapper .save_list_item_area {
+    background-color: rgba(14, 10, 8, 0.86);
+    background-image: none;
+    border: 1px solid #806030;
+    border-left: none;
+    padding: 20px 16px 0 0;
+}
+
+#menu_save_wrapper .save_list_item:hover .save_list_item_thumb,
+#menu_save_wrapper .save_list_item:hover .save_list_item_area,
+#menu_load_wrapper .save_list_item:hover .save_list_item_thumb,
+#menu_load_wrapper .save_list_item:hover .save_list_item_area,
+#menu_save_wrapper .save_list_item:focus .save_list_item_thumb,
+#menu_save_wrapper .save_list_item:focus .save_list_item_area,
+#menu_load_wrapper .save_list_item:focus .save_list_item_thumb,
+#menu_load_wrapper .save_list_item:focus .save_list_item_area {
+    background-color: rgba(76, 20, 28, 0.9);
+    border-color: #f6e2aa;
+}
+
+#menu_save_wrapper .save_list_item:hover,
+#menu_load_wrapper .save_list_item:hover {
+    background-color: transparent;
+}
+
+#menu_save_wrapper .save_list_item_date,
+#menu_load_wrapper .save_list_item_date {
+    color: #d8b26a;
+    letter-spacing: 0.05em;
+}
+
+#menu_save_wrapper .save_list_item_text,
+#menu_load_wrapper .save_list_item_text {
+    color: #ece0c8;
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+/* スクロールバー（セーブ・ロード・バックログ） */
+#menu_save_wrapper .area_save_list::-webkit-scrollbar-thumb,
+#menu_load_wrapper .area_save_list::-webkit-scrollbar-thumb,
+#menu_backlog_wrapper .log_body::-webkit-scrollbar-thumb {
+    background: linear-gradient(#f6e2aa, #d8b26a 50%, #806030);
+}
+
+#menu_save_wrapper .area_save_list::-webkit-scrollbar-track,
+#menu_load_wrapper .area_save_list::-webkit-scrollbar-track,
+#menu_backlog_wrapper .log_body::-webkit-scrollbar-track {
+    background: rgba(216, 178, 106, 0.12);
+}
+
+/* バックログ */
+#menu_backlog_wrapper .log_body {
+    margin: 40px auto 0 auto;
+    width: 1040px;
+    height: 420px;
+    padding: 24px 30px;
+    color: #ece0c8;
+    background: rgba(14, 10, 8, 0.86);
+    border: 1px solid #806030;
+    outline: 1px solid rgba(216, 178, 106, 0.5);
+    outline-offset: 4px;
+    font-family: "Yu Mincho", "YuMincho", "游明朝", serif !important;
+    font-size: 22px;
+}
+
+/* 確認のダイアログ（タイトルに戻るときなど） */
+.remodal-overlay {
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.remodal {
+    background: linear-gradient(#1e1612, #0a0807);
+    border: 2px solid #d8b26a;
+    outline: 1px solid #806030;
+    outline-offset: -9px;
+    border-radius: 6px;
+    color: #ece0c8;
+    font-family: "Yu Mincho", "YuMincho", "游明朝", serif !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+}
+
+.remodal .remodal-boxbase {
+    background: none;
+}
+
+.remodal .remodal_title {
+    color: #f6e2aa;
+    font-size: 24px;
+    letter-spacing: 0.05em;
+}
+
+.remodal .remodal_txt {
+    color: #ece0c8;
+}
+
+.remodal .remodal-cancel,
+.remodal .remodal-confirm {
+    min-width: 170px;
+    padding: 10px 0;
+    margin: 0 12px;
+    background: #120d0a;
+    border: 1px solid #d8b26a;
+    border-radius: 4px;
+    color: #d8b26a;
+    font-size: 0;
+    font-family: "Meiryo", "メイリオ", sans-serif;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+}
+
+.remodal .remodal-cancel::after {
+    content: "やめる";
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.remodal .remodal-confirm::after {
+    content: "OK";
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.remodal .remodal-cancel:hover,
+.remodal .remodal-confirm:hover,
+.remodal .remodal-cancel:focus,
+.remodal .remodal-confirm:focus {
+    background: #5c1820;
+    border-color: #f6e2aa;
+    color: #f6e2aa;
+}
